@@ -1,4 +1,15 @@
 export default function Footer() {
+
+  const scrollTo = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 80,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <footer className="bg-[#020617] text-white mt-32 relative overflow-hidden">
 
@@ -45,19 +56,34 @@ export default function Footer() {
             </h4>
 
             <div className="flex flex-col gap-3 text-sm">
-              <a className="hover:text-primary transition cursor-pointer">
+              <a
+                className="hover:text-primary transition cursor-pointer"
+                onClick={() => scrollTo("inicio")}
+              >
                 Início
               </a>
-              <a className="hover:text-primary transition cursor-pointer">
+              <a
+                className="hover:text-primary transition cursor-pointer"
+                onClick={() => scrollTo("resultados")}
+              >
                 Resultados
               </a>
-              <a className="hover:text-primary transition cursor-pointer">
-               Método 
+              <a
+                className="hover:text-primary transition cursor-pointer"
+                onClick={() => scrollTo("metodo")}
+              >
+               Método
               </a>
-              <a className="hover:text-primary transition cursor-pointer">
+              <a
+                className="hover:text-primary transition cursor-pointer"
+                onClick={() => scrollTo("protocolos")}
+              >
                 Protocolos
               </a>
-              <a className="hover:text-primary transition cursor-pointer">
+              <a
+                className="hover:text-primary transition cursor-pointer"
+                onClick={() => scrollTo("sobre")}
+              >
                 Sobre
               </a>
             </div>
@@ -73,7 +99,10 @@ export default function Footer() {
               <p>Atendimento online</p>
               <p>Brasil</p>
 
-              <a className="hover:text-primary transition cursor-pointer">
+              <a
+                className="hover:text-primary transition cursor-pointer"
+                onClick={() => scrollTo("contato")}
+              >
                 WhatsApp
               </a>
 
