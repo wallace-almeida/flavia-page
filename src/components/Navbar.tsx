@@ -23,10 +23,48 @@ export default function Navbar() {
         }`}
       >
 
-        {/* LOGO */}
-        <div className="text-xl md:text-2xl font-bold font-headline tracking-tight">
-          Flávia Cristina
-        </div>
+       {/* LOGO */}
+<div className="flex items-center gap-2.5">
+
+  {/* ÍCONE DE NUTRIÇÃO */}
+  <div className="relative w-10 h-10 flex items-center justify-center">
+
+    {/* BACKGROUND GRADIENTE */}
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-green-400/20 rounded-lg"></div>
+
+    {/* ÍCONE DE FOLHA */}
+    <svg
+      className="w-5 h-5 text-primary relative z-10"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M5 13c0-5 5-9 14-9-1 9-5 14-10 14-2.5 0-4-2-4-5z"
+      />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M9 13c2-2 4-3 7-4"
+      />
+    </svg>
+
+  </div>
+  
+  {/* TEXTO DO NOME */}
+  <div>
+    <div className="text-lg md:text-xl font-bold font-headline tracking-tight bg-gradient-to-r from-primary to-green-600 bg-clip-text text-transparent">
+      Flávia Cristina
+    </div>
+    <div className="text-xs md:text-sm text-primary/70 font-medium leading-none">
+      Nutricionista
+    </div>
+  </div>
+
+</div>
 
         {/* MENU */}
         <div className="hidden md:flex items-center gap-10 text-sm font-medium">

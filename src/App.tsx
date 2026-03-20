@@ -1,14 +1,14 @@
 
-import CTA from "./components/CTA";
+
 import Differentials from "./components/Differentials";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Method from "./components/Method";
 import Navbar from "./components/Navbar";
+import PainSection from "./components/PainSection";
 
 import Proof from "./components/Proof";
 import Services from "./components/Services";
-import Testimonials from "./components/Testimonials";
 
 export default function App() {
   return (
@@ -19,8 +19,7 @@ export default function App() {
       <Method />
       <Services />
       <Differentials />
-      <Testimonials />
-      <CTA />
+      <PainSection />
       <Footer />
     </div>
   );
