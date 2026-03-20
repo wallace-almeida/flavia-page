@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden px-6">
+    <section id="inicio" className="relative pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden px-6">
 
       {/* BACKGROUND */}
       <div className="absolute top-0 right-0 -z-10 w-2/3 h-full bg-gradient-to-br from-primary-container/30 to-transparent rounded-bl-[120px] blur-3xl opacity-50"></div>

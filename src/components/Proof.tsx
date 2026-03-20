@@ -4,7 +4,7 @@ import healthySalad from "../assets/healthy_salad_bowl.jpg";
 
 export default function Proof() {
   return (
-    <section className="py-24 bg-surface-container-low px-6">
+    <section id="resultados" className="py-24 bg-surface-container-low px-6">
       {/* TÍTULO PRINCIPAL */}
       <div className="max-w-4xl mx-auto text-center mb-20">
         <motion.div

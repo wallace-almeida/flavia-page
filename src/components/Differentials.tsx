@@ -1,6 +1,6 @@
 export default function Differentials() {
   return (
-    <section className="py-32 px-6 bg-gradient-to-b from-[#f8fafc] to-white">
+    <section id="sobre" className="py-32 px-6 bg-gradient-to-b from-[#f8fafc] to-white">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
 
         {/* FOTO + IDENTIDADE */}

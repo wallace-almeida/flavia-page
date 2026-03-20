@@ -1,6 +1,20 @@
 export default function PainSection() {
+
+  const scrollTo = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 80, // ajusta altura do header fixo
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <section className="py-32 px-6 bg-[#020617] text-white relative overflow-hidden">
+    <section 
+      id="contato"  // <-- id usado para navbar e botões
+      className="py-32 px-6 bg-[#020617] text-white relative overflow-hidden"
+    >
 
       {/* GLOW */}
       <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-primary/30 blur-[120px] rounded-full"></div>
@@ -21,7 +35,6 @@ export default function PainSection() {
 
         {/* LISTA */}
         <div className="grid md:grid-cols-2 gap-6 text-left mb-16">
-
           {[
             "Cansaço constante, mesmo dormindo bem",
             "Dores frequentes no corpo (como na fibromialgia)",
@@ -40,7 +53,6 @@ export default function PainSection() {
               <p className="text-gray-200">{item}</p>
             </div>
           ))}
-
         </div>
 
         {/* QUEBRA DE CRENÇA */}
@@ -55,20 +67,24 @@ export default function PainSection() {
         </div>
 
         {/* CTA */}
-        <div className="flex justify-center">
-          <button className="relative group px-8 py-4 rounded-full text-lg font-semibold text-white overflow-hidden">
-
-            {/* BG */}
+        <div className="flex flex-col items-center gap-4">
+          <button
+            onClick={() => scrollTo("contato")}
+            className="relative group px-8 py-4 rounded-full text-lg font-semibold text-white overflow-hidden"
+          >
             <span className="absolute inset-0 bg-gradient-to-r from-primary to-green-500"></span>
-
-            {/* GLOW */}
             <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-white/20 blur-md"></span>
 
-            {/* TEXTO */}
             <span className="relative z-10">
               Quero entender o que está acontecendo comigo
             </span>
+          </button>
 
+          <button
+            onClick={() => scrollTo("contato")}
+            className="text-sm text-white/70 hover:text-white transition underline underline-offset-4"
+          >
+            ou agendar consulta diretamente
           </button>
         </div>
 

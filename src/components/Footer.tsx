@@ -49,13 +49,16 @@ export default function Footer() {
                 Início
               </a>
               <a className="hover:text-primary transition cursor-pointer">
-                Método
+                Resultados
+              </a>
+              <a className="hover:text-primary transition cursor-pointer">
+               Método 
               </a>
               <a className="hover:text-primary transition cursor-pointer">
                 Protocolos
               </a>
               <a className="hover:text-primary transition cursor-pointer">
-                Resultados
+                Sobre
               </a>
             </div>
           </div>
