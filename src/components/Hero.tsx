@@ -1,6 +1,16 @@
 import { motion } from "framer-motion";
 
 export default function Hero() {
+  const scrollTo = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 80,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section id="inicio" className="relative pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden px-6">
 
@@ -36,6 +46,7 @@ export default function Hero() {
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-primary to-primary-container text-white px-10 py-5 rounded-full font-headline text-lg font-bold shadow-[0_20px_60px_rgba(0,110,28,0.35)]"
+              onClick={() => scrollTo("contato")}
             >
               Agendar consulta
             </motion.button>
@@ -43,24 +54,14 @@ export default function Hero() {
             <motion.button
               whileHover={{ x: 6 }}
               className="flex items-center gap-2 font-bold text-on-surface text-lg"
+              onClick={() => scrollTo("metodo")}
             >
               Conhecer o método →
             </motion.button>
 
           </div>
 
-          {/* PROVA SOCIAL MELHORADA */}
-          <div className="flex items-center gap-4">
-            <div className="flex -space-x-3">
-              <img className="w-10 h-10 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=1" />
-              <img className="w-10 h-10 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=2" />
-              <img className="w-10 h-10 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=3" />
-            </div>
-
-            <p className="text-sm text-on-surface-variant">
-              +500 mulheres transformaram sua saúde
-            </p>
-          </div>
+         
         </motion.div>
 
         {/* FOTO */}

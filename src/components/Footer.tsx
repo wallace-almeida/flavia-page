@@ -86,6 +86,12 @@ export default function Footer() {
               >
                 Sobre
               </a>
+              <a
+                className="hover:text-primary transition cursor-pointer"
+                onClick={() => scrollTo("contato")}
+              >
+                Agendar Consulta
+              </a>
             </div>
           </div>
 
