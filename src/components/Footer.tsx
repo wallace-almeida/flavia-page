@@ -106,11 +106,21 @@ export default function Footer() {
               <p>Brasil</p>
 
               <a
-                className="hover:text-primary transition cursor-pointer"
-                onClick={() => scrollTo("contato")}
-              >
-                WhatsApp
-              </a>
+  href="https://wa.me/5521976440779?text=Olá,%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20consulta"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 hover:text-green-400 transition"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    className="w-4 h-4 fill-current"
+  >
+    <path d="M16 .5C7.5.5.5 7.5.5 16c0 2.8.7 5.4 2.1 7.7L.5 31.5l7.9-2.1C10.6 30.8 13.2 31.5 16 31.5c8.5 0 15.5-7 15.5-15.5S24.5.5 16 .5z"/>
+  </svg>
+
+  WhatsApp
+</a>
 
               <a className="hover:text-primary transition cursor-pointer">
                 Instagram

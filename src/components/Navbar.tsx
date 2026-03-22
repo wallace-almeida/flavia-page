@@ -68,25 +68,11 @@ export default function Navbar() {
         {/* LOGO */}
         <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => scrollTo("inicio")}>
           <div className="relative w-10 h-10 flex items-center justify-center">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-green-400/20 rounded-lg"></div>
-            <svg
-              className="w-5 h-5 text-primary relative z-10"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M5 13c0-5 5-9 14-9-1 9-5 14-10 14-2.5 0-4-2-4-5z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 13c2-2 4-3 7-4"
-              />
-            </svg>
+            <img
+              src="/logo.png"
+              alt="Flávia Cristina - Nutricionista"
+              className="w-full h-full object-contain"
+            />
           </div>
 
           <div>
