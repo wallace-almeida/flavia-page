@@ -1,4 +1,15 @@
+import { useEffect, useState } from "react";
+
 export default function Method() {
+  const [activeStep, setActiveStep] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveStep((prev) => (prev + 1) % 3);
+    }, 2500); // 2.5 segundos por step
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section
       id="metodo"
@@ -53,12 +64,18 @@ export default function Method() {
               <div key={i} className="flex gap-8 items-start group">
 
                 {/* NUMBER BIG */}
-                <div className="text-5xl font-extrabold text-white/10 group-hover:text-primary transition">
+                <div className={`text-5xl font-extrabold transition-all duration-500 ${
+                  activeStep === i ? "text-primary scale-110" : "text-white/10"
+                }`}>
                   {item.number}
                 </div>
 
                 {/* CARD */}
-                <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-2xl shadow-xl hover:scale-[1.02] transition w-full">
+                <div className={`border p-6 rounded-2xl shadow-xl transition-all duration-500 w-full ${
+                  activeStep === i
+                    ? "bg-white/10 backdrop-blur-xl border-primary/30 scale-[1.02] shadow-primary/20"
+                    : "bg-white/5 backdrop-blur-xl border-white/10"
+                }`}>
                   <h4 className="text-xl font-semibold mb-2">
                     {item.title}
                   </h4>
